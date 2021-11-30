@@ -1,0 +1,19 @@
+Course: CS-131-Artificial Intelligence
+Assignment: Naive Bayesian Estimation
+Name: Yige Sun
+
+I test this program(main.py) in pycharm.
+To run the program(main.py), make sure it's in the same folder with data.txt.
+
+When running the program, first you will be asked to tune 'hyper-parameters'. the answer to add extra feature must be 'y' or 'n'('y' for adding and 'n' for not).
+
+First, we load data and transform data to managable type(string to float).
+Second, we let NaN value equal to 0. This could prevent the interruption of NaN value, since the probability of 0 to be airplane or bird will be both 0.
+Third, we use the recursive bayesian estimation to get the probability of one object to be airplane or bird based on their velocity.
+Finally, we classified objects based on their probabilities.
+
+I do add extra feature.
+The extra feature I add is: the absolute value of difference between the one data and its previous data.
+I learned that birds tend to have an un-smooth trajectory and will sudden change in velocity but planes cannot make such changes; thus, if the absolute value of difference between two consecutive velocities is big enough, this means this object would probably be a bird.
+
+By adding extra feature, I improve the accuracy from 80% to 90%.
